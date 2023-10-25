@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;400;600;700;800;900&display=swap">
 
@@ -16,7 +18,7 @@
   <!-- <header></header> -->
 
   <section id="section1">
-    <div class="container">
+    <div class="wrapper">
 
       <div class="header">
         <img class="logo" src="img/tmlogo.svg" alt="TechMagic logo">
@@ -63,6 +65,49 @@
   </section>
 
   <section id="section2">
+    <div class="wrapper">
+      <h1 class="title"> Slider Swiper</h1>
+
+      <!-- Slider -->
+      <div class="image-slider swiper-container">
+        <div class="image-slider__wrapper swiper-wrapper">
+
+          <div class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/1_Basic_Security_Training.png" alt="slide 1">
+            </div>
+          </div>
+
+          <div class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/2_BST_Standarts.png" alt="slide 2">
+            </div>
+          </div>
+
+          <div class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/3_BST_ISO_9001.png" alt="slide 3">
+            </div>
+          </div>
+
+          <div class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/4_BST_ISO_27001.png" alt="slide 4">
+            </div>
+          </div>
+
+          <div class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/5_BST_ManageEngine.png" alt="slide 5">
+            </div>
+          </div>
+
+          <!-- If we need navigation buttons Якщо потрібні стрілки управління-->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
     <!-- Section 2 content goes here -->
   </section>
 
@@ -107,6 +152,8 @@
 
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
   <script src="js/main.js"></script>
 </body>
 
