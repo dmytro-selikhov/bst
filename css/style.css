@@ -98,8 +98,43 @@ body {
 }
 
 /* -------------------------- */
+.image-slider .swiper-button-prev::after,
+.image-slider .swiper-button-next::after {
+  color: #00B2A9;
+  font-size: 80px;
+}
 
+/* Pagination */
+.image-slider .swiper-pagination {
+  bottom: 0;
+}
 
+/* Bullets */
+.image-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #00B2A9;
+  ;
+}
+
+/* Fraction */
+.image-slider .swiper-pagination-fraction {
+  font-size: 20px;
+  color: #00B2A9;
+}
+
+/* Progressbar */
+.image-slider .swiper-pagination-progressbar-fill {
+  background-color: #00B2A9;
+}
+
+/* Scroll */
+.image-slider .swiper-scrollbar-drag {
+  cursor: pointer;
+  background-color: #00B2A9;
+}
 
 
 
@@ -203,6 +238,10 @@ body {
   border: none;
   font-weight: 800;
   font-size: 18px;
+}
+
+.form_btn:hover {
+  cursor: pointer;
 }
 
 .smaller {
