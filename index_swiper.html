@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" /> -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200;400;600;700;800;900&display=swap">
 
@@ -65,24 +65,55 @@
   </section>
 
   <section id="section2">
-
     <div class="wrapper">
-      <div class="slider">
-        <div class="slider__item filter">
-          <img src="img/sliderOne/1_Basic_Security_Training.png" alt="slide 1">
+      <h1 class="title"> Slider Swiper test</h1>
+
+      <!-- Slider -->
+      <div class="image-slider swiper-container">
+        <!-- Хеш навігація -->
+        <div class="image-slider__wrapper swiper-wrapper">
+
+          <div data-hash="skide-1" class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/1_Basic_Security_Training.png" alt="slide 1">
+            </div>
+          </div>
+
+          <div data-hash="skide-2" class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/2_BST_Standarts.png" alt="slide 2">
+            </div>
+          </div>
+
+          <div data-hash="skide-3" class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/3_BST_ISO_9001.png" alt="slide 3">
+            </div>
+          </div>
+
+          <div data-hash="skide-4" class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/4_BST_ISO_27001.png" alt="slide 4">
+            </div>
+          </div>
+
+          <div data-hash="skide-5" class="image-slider__slide swiper-slide">
+            <div class="image-slider__image">
+              <img src="img/sliderOne/5_BST_ManageEngine.png" alt="slide 5">
+            </div>
+          </div>
         </div>
-        <div class="slider__item">
-          <img src="img/sliderOne/2_BST_Standarts.png" alt="slide 2">
-        </div>
-        <div class="slider__item filter">
-          <img src="img/sliderOne/3_BST_ISO_9001.png" alt="slide 3">
-        </div>
-        <div class="slider__item">
-          <img src="img/sliderOne/4_BST_ISO_27001.png" alt="slide 4">
-        </div>
-        <div class="slider__item">
-          <img src="img/sliderOne/5_BST_ManageEngine.png" alt="slide 5">
-        </div>
+
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+
       </div>
 
     </div>
@@ -130,13 +161,9 @@
 
   </footer>
 
-
-  <!-- Подключаем jQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <!-- Подключаем слайдер Slick -->
-  <script src="js/slick.min.js"></script>
-  <!-- Подключаем файл скриптов -->
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+  <script src="js/slick.js"></script>
   <!-- <script src="js/main.js"></script> -->
 </body>
 
