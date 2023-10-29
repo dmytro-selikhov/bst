@@ -121,6 +121,7 @@ body {
 }
 
 .section1__info {
+  /* padding-top: 30px; */
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -207,9 +208,6 @@ footer {
   width: 213px;
   height: 71px;
 }
-
-
-
 
 
 @media (max-width:767px) {
@@ -318,19 +316,23 @@ footer {
 
 .slider .slick-dots button {
   font-size: 0;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   background-color: #E0004D;
   border-radius: 50%;
 }
 
 .slider .slick-dots li.slick-active button {
   background-color: transparent;
+  width: 16px;
+  height: 16px;
   border: 1px solid #E0004D;
 }
 
 .slider__item {
   /* padding: 0px 15px; */
+  /* transition: all 0.3s ease 0s; */
+  text-align: center;
 }
 
 .slider__item img {

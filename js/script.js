@@ -6,6 +6,12 @@ $(document).ready(function () {
     autoplay: false,
     speed: 1000,
     autoplaySpeed: 800,
+    adaptiveHeight: false,
+    easing: 'liner',
+    infinite: false,
+    pauseOnFocus: true,
+    pauseOnHover: true,
+    pauseOnDotsHover: true,
     responsive: [
       {
         breakpoint: 768,
