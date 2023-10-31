@@ -1,32 +1,32 @@
 const questions = [
   {
-    question: "Какой язык работает в браузере?",
-    answers: ["Java", "C", "Python", "JavaScript"],
+    question: "What standards are used in the company?",
+    answers: ["ISO 9002:2012, ISO 27001:2013", "ISO 9002:2011", "ISO 27001:2013", "ISO 9001:2015, ISO 27001:2013"],
     correct: 4,
   },
   {
-    question: "Что означает CSS?",
+    question: "ISO 9001:2015 is: ",
     answers: [
-      "Central Style Sheets",
-      "Cascading Style Sheets",
-      "Cascading Simple Sheets",
-      "Cars SUVs Sailboats",
+      "an international security standard that lays out best practices for how organizations should manage their data",
+      "a set of practices and requirements that can help organizations of all sizes improve their quality management and create a quality management system (QMS)",
+      "none of above",
+      "all of above",
     ],
     correct: 2,
   },
   {
-    question: "Что означает HTML?",
+    question: "ISO 27001:2013 is: ",
     answers: [
-      "Hypertext Markup Language",
-      "Hypertext Markdown Language",
-      "Hyperloop Machine Language",
-      "Helicopters Terminals Motorboats Lamborginis",
+      "an international security standard that lays out best practices for how organizations should manage their data",
+      "a set of practices and requirements that can help organizations of all sizes improve their quality management and create a quality management system (QMS)",
+      "none of above",
+      "all of above",
     ],
     correct: 1,
   },
   {
-    question: "В каком году был создан JavaScript?",
-    answers: ["1996", "1995", "1994", "все ответы неверные"],
+    question: "What product does the company use to administer its IT infrastructure?",
+    answers: ["PCControl", "ManageEngine", "Jamf", "None of above"],
     correct: 2,
   },
 ];

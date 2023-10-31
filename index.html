@@ -92,60 +92,44 @@
   <section id="section3">
     <!-- Section 3 content goes here -->
 
+    <div class="section__quiz">
+      <div class="quiz" id="quiz">
 
-    <div class="quiz" id="quiz">
+        <div class="quiz-header" id="header">
+          <!-- Заголовок вопроса -->
+          <h2 class="title">Загружаем вопрос...</h2>
 
-      <div class="quiz-header" id="header">
-        <!-- Заголовок вопроса -->
-        <h2 class="title">Загружаем вопрос...</h2>
+          <!-- Результаты викторины -->
+          <h2 class="title">%title%</h2>
+          <h3 class="summary">%message%</h3>
+          <p class="result">%result%</p>
+        </div>
 
-        <!-- Результаты викторины -->
-        <h2 class="title">%title%</h2>
-        <h3 class="summary">%message%</h3>
-        <p class="result">%result%</p>
+        <ul class="quiz-list" id="list">
+          <li>
+            <label>
+              <input type="radio" class="answer" name="answer" />
+              <span>Ответ...</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" class="answer" name="answer" />
+              <span>Ответ...</span>
+            </label>
+          </li>
+        </ul>
+
+        <button class="quiz-submit submit" id="submit">Ответить</button>
+
       </div>
 
-      <ul class="quiz-list" id="list">
-        <li>
-          <label>
-            <input type="radio" class="answer" name="answer" />
-            <span>Ответ...</span>
-          </label>
-        </li>
-        <li>
-          <label>
-            <input type="radio" class="answer" name="answer" />
-            <span>Ответ...</span>
-          </label>
-        </li>
-      </ul>
-
-      <button class="quiz-submit submit" id="submit">Ответить</button>
-
     </div>
-    </div>
-
 
   </section>
 
   <section id="section4">
-    <div class="slider2">
-      <div class="slider2__item filter">
-        <img data-lazy="img/sliderOne/1_Basic_Security_Training.png" alt="slide 1">
-      </div>
-      <div class="slider2__item">
-        <img data-lazy="img/sliderOne/2_BST_Standarts.png" alt="slide 2">
-      </div>
-      <div class="slider2__item filter">
-        <img data-lazy="img/sliderOne/3_BST_ISO_9001.png" alt="slide 3">
-      </div>
-      <div class="slider2__item">
-        <img data-lazy="img/sliderOne/4_BST_ISO_27001.png" alt="slide 4">
-      </div>
-      <div class="slider2__item">
-        <img data-lazy="img/sliderOne/5_BST_ManageEngine.png" alt="slide 5">
-      </div>
-    </div>
+
     <!-- Section 4 content goes here -->
   </section>
 
@@ -188,6 +172,7 @@
   <!-- Подключаем слайдер Slick -->
   <script src="js/slick.min.js"></script>
   <!-- Подключаем файл скриптов -->
+  <script src="js/quiz.js"></script>
   <script src="js/script.js"></script>
   <!-- <script src="js/main.js"></script> -->
 </body>
