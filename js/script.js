@@ -27,9 +27,9 @@ $(document).ready(function () {
       }
     ]
   });
-  $('.slider2').slick({
-    arrows: false,
-    dots: false,
+  $('.sliderTwo').slick({
+    arrows: true,
+    dots: true,
     slidesToShow: 1,
     autoplay: false,
     speed: 1000,
@@ -55,4 +55,7 @@ $(document).ready(function () {
       }
     ]
   });
+
+
+
 });

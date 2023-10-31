@@ -109,7 +109,8 @@ body {
   background: linear-gradient(134deg, #FFF 29.52%, #C7D5E0 118.05%);
 }
 
-#section2 {
+#section2,
+#section4 {
   background: linear-gradient(90deg, #FFF 29.52%, #C7D5E0 118.05%);
   padding-bottom: 30px;
 }
@@ -269,7 +270,7 @@ footer {
 
 .slick-dots button {}
 
-/* Конкретный слайдер */
+/* Конкретный слайдер .slider*/
 .slider {
   position: relative;
   padding: 0px 60px;
@@ -280,6 +281,7 @@ footer {
     padding: 0px 40px;
   }
 }
+
 
 .slider .slick-arrow {
   position: absolute;
@@ -305,16 +307,19 @@ footer {
   opacity: 0.2;
 }
 
+
 .slider .slick-dots {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+
 .slider .slick-dots li {
   list-style: none;
   margin: 0px 10px;
 }
+
 
 .slider .slick-dots button {
   font-size: 0;
@@ -323,6 +328,7 @@ footer {
   background-color: #E0004D;
   border-radius: 50%;
 }
+
 
 .slider .slick-dots li.slick-active button {
   background-color: transparent;
@@ -337,11 +343,92 @@ footer {
   text-align: center;
 }
 
+
 .slider__item img {
   max-width: 100%;
 }
 
 .slider__item.slick-center {}
+
+/* Конкретный слайдер .sliderTwo*/
+.sliderTwo {
+  position: relative;
+  padding: 0px 60px;
+}
+
+@media (max-width:767px) {
+  .sliderTwo {
+    padding: 0px 40px;
+  }
+}
+
+
+.sliderTwo .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -30px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 30px;
+  height: 60px;
+}
+
+.sliderTwo .slick-arrow.slick-prev {
+  left: 105px;
+  background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+}
+
+.sliderTwo .slick-arrow.slick-next {
+  right: 105px;
+  background: url('../img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
+}
+
+.sliderTwo .slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+
+.sliderTwo .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.sliderTwo .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+
+.sliderTwo .slick-dots button {
+  font-size: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #E0004D;
+  border-radius: 50%;
+}
+
+
+.sliderTwo .slick-dots li.slick-active button {
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #E0004D;
+}
+
+.sliderTwo__item {
+  /* padding: 0px 15px; */
+  /* transition: all 0.3s ease 0s; */
+  text-align: center;
+}
+
+
+.sliderTwo__item img {
+  max-width: 100%;
+}
+
+.sliderTwo__item.slick-center {}
 
 
 
