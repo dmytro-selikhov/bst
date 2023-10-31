@@ -180,6 +180,15 @@ function showResults() {
   submitBtn.innerText = 'Go to the next section';
 
   // Перезавантаження стоірнки, треба поміняти на перехід до іншої секції та зберегти результат у змінну.
-  submitBtn.onclick = () => history.go();
+  // submitBtn.onclick = () => history.go();
+
+  submitBtn.onclick = function () {
+    // Scroll to the "section4" element
+    const section4 = document.getElementById("section4");
+    if (section4) {
+      section4.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
 
 };
