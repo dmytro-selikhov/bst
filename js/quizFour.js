@@ -1,7 +1,7 @@
-const questionsTwo = [
+const questionsFour = [
   {
-    question: "When should you lock your workstation screen?",
-    answers: ["When the employee left for lunch.", "When an employee works in a public place.", "Any time the workstation is left unattended.", "You never need to lock your workstation screen."],
+    question: "1password is",
+    answers: ["1 password", "companies control app", "digital password safety place", "i'm not sure what is it"],
     correct: 3,
   },
   {
@@ -32,40 +32,40 @@ const questionsTwo = [
 ];
 
 // Шукаємо елементи 
-const headerContainerTwo = document.querySelector('#headerTwo');
-const listContainerTwo = document.querySelector('#listTwo');
-const submitBtnTwo = document.querySelector('#submitTwo');
+const headerContainerFour = document.querySelector('#headerFour');
+const listContainerFour = document.querySelector('#listFour');
+const submitBtnFour = document.querySelector('#submitFour');
 
 // Змінні гри
-let scoreTwo = 0; // кількість вірних відповідей
-let questionIndexTwo = 0; // актуальне питання
+let scoreFour = 0; // кількість вірних відповідей
+let questionIndexFour = 0; // актуальне питання
 
 // Функція з очистки контейнера з інформацією
-clearPageTwo();
-showQuestionTwo();
-submitBtnTwo.onclick = checkAnswerTwo;
+clearPageFour();
+showQuestionFour();
+submitBtnFour.onclick = checkAnswerFour;
 
-function clearPageTwo() {
-  headerContainerTwo.innerHTML = '';
-  listContainerTwo.innerHTML = '';
+function clearPageFour() {
+  headerContainerFour.innerHTML = '';
+  listContainerFour.innerHTML = '';
 }
 
 // Відображаємо поточне питання
-function showQuestionTwo() {
-  console.log('showQuestionTwo()');
+function showQuestionFour() {
+  console.log('showQuestionFour()');
 
   // Питання
-  // console.log(questionsTwo[questionIndexTwo]['question']);
+  // console.log(questionsFour[questionIndexFour]['question']);
 
   // Створюємо шаблон питання:
-  const headerTemplateTwo = `<h2 class="title">%title%</h2>`;
-  const titleTwo = headerTemplateTwo.replace('%title%', questionsTwo[questionIndexTwo]['question']);
+  const headerTemplateFour = `<h2 class="title">%title%</h2>`;
+  const titleFour = headerTemplateFour.replace('%title%', questionsFour[questionIndexFour]['question']);
 
-  headerContainerTwo.innerHTML = titleTwo;
+  headerContainerFour.innerHTML = titleFour;
 
   // Варіанти відповідей
   let answerNumber = 1;
-  for (answerText of questionsTwo[questionIndexTwo]['answers']) {
+  for (answerText of questionsFour[questionIndexFour]['answers']) {
     // Створюємо шаблон відповідей
     const questionTemplate =
       `<li>
@@ -84,23 +84,23 @@ function showQuestionTwo() {
       .replace('%number%', answerNumber);
 
     // Додаємо всі варіанти відповідей до структури HTML
-    listContainerTwo.innerHTML += answerHTML;
+    listContainerFour.innerHTML += answerHTML;
     answerNumber++;
   }
 };
 
-function checkAnswerTwo() {
-  console.log('checkAnswerTwo started');
+function checkAnswerFour() {
+  console.log('checkAnswerFour started');
 
   // Для того щоб знайти обрану кнопку у певному контейнері треба обрати контейнер та використати querySelector('input[type="radio"]:checked')
-  // listContainerTwo.querySelector('input[type="radio"]:checked')
+  // listContainerFour.querySelector('input[type="radio"]:checked')
 
-  const checkedRadio = listContainerTwo.querySelector('input[type="radio"]:checked');
+  const checkedRadio = listContainerFour.querySelector('input[type="radio"]:checked');
 
   // Перевірка: Чи була знайдена кнопка з відповіддю, чи ні
   // Якщо відповідь не надана, то виходимо з функції.
   if (!checkedRadio) {
-    submitBtnTwo.blur();
+    submitBtnFour.blur();
     return;
   }
 
@@ -108,24 +108,24 @@ function checkAnswerTwo() {
   const userAnswer = parseInt(checkedRadio.value);
 
   // Якщо відповідь вірна, то збільшуємо рахунок
-  // questionsTwo[questionIndexTwo]['correct'] - вірна відповідь
-  if (userAnswer === questionsTwo[questionIndexTwo]['correct']) {
-    scoreTwo++;
+  // questionsFour[questionIndexFour]['correct'] - вірна відповідь
+  if (userAnswer === questionsFour[questionIndexFour]['correct']) {
+    scoreFour++;
   } else {
-    scoreTwo = scoreTwo;
+    scoreFour = scoreFour;
   }
-  console.log('score = ', scoreTwo);
+  console.log('score = ', scoreFour);
 
   // Перевіряємо, чи останній елемент у масиві
-  if (questionIndexTwo !== questionsTwo.length - 1) {
+  if (questionIndexFour !== questionsFour.length - 1) {
     //  Не останнє питання у масиві
     console.log('Not last question');
     // Збільшуємо індекс на 1
-    questionIndexTwo++;
+    questionIndexFour++;
     // Чистимо сторінку від попереднього питання з відповідями
-    clearPageTwo();
+    clearPageFour();
     // Генеруємо нове питання з відповідями
-    showQuestionTwo();
+    showQuestionFour();
     // Функція закінчила свою работу
     return;
 
@@ -133,7 +133,7 @@ function checkAnswerTwo() {
     // Останнє питання у масиві
     console.log('Last question');
     // Чистимо сторінку від останього запитання
-    clearPageTwo();
+    clearPageFour();
     // Показуємо результати
     showResults();
 
@@ -142,7 +142,7 @@ function checkAnswerTwo() {
 };
 
 function showResults() {
-  console.log('This section result is ', scoreTwo);
+  console.log('This section result is ', scoreFour);
 
   const resultsTemplate = `
       <h2 class="title">%title%</h2>
@@ -152,10 +152,10 @@ function showResults() {
 
   let title, message;
   // Варіанти відповідей в залежності від рахунка в секції.
-  if (scoreTwo === questionsTwo.length) {
+  if (scoreFour === questionsFour.length) {
     title = 'Congratulations!';
     message = 'You have passed all questions, Master Jedi!'
-  } else if (scoreTwo * 100 / questionsTwo.length >= 50) {
+  } else if (scoreFour * 100 / questionsFour.length >= 50) {
     title = 'Good result';
     message = 'You have passed more than half questions, Jedi Knight!'
   } else {
@@ -164,7 +164,7 @@ function showResults() {
   }
 
   // Результат
-  let result = `${scoreTwo} of ${questionsTwo.length}`;
+  let result = `${scoreFour} of ${questionsFour.length}`;
 
   // Фінальне сповіщення
   const finalMessage = resultsTemplate
@@ -173,20 +173,20 @@ function showResults() {
     .replace('%result%', result);
 
 
-  headerContainerTwo.innerHTML = finalMessage;
+  headerContainerFour.innerHTML = finalMessage;
 
   // Грати знову - поміняти на перейти до наступної секції
-  submitBtnTwo.blur();
-  submitBtnTwo.innerText = 'Go to the next section';
+  submitBtnFour.blur();
+  submitBtnFour.innerText = 'Go to the next section';
 
   // Перезавантаження стоірнки, треба поміняти на перехід до іншої секції та зберегти результат у змінну.
-  // submitBtnTwo.onclick = () => history.go();
+  // submitBtnFour.onclick = () => history.go();
 
-  submitBtnTwo.onclick = function () {
-    // Scroll to the "section6" element
-    const section6 = document.getElementById("section6");
-    if (section6) {
-      section6.scrollIntoView({ behavior: "smooth" });
+  submitBtnFour.onclick = function () {
+    // Scroll to the "section9" element
+    const section9 = document.getElementById("section9");
+    if (section9) {
+      section9.scrollIntoView({ behavior: "smooth" });
     }
   };
 
