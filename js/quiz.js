@@ -31,6 +31,7 @@ const questions = [
   },
 ];
 
+
 // Шукаємо елементи 
 const headerContainer = document.querySelector('#header');
 const listContainer = document.querySelector('#list');
@@ -189,6 +190,5 @@ function showResults() {
       section4.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-
 };
+
