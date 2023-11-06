@@ -1,33 +1,51 @@
 const questionsThree = [
   {
-    question: "Strong Password is:?",
-    answers: ["My pet name", "qwerty", "My birthday", "none of above"],
+    question: "Which of the following is an example of a strong password?",
+    answers: ["Passw0rd", "13Jun1990", "$ayN02#ackers", "MyPetName"],
     correct: 3,
   },
   {
-    question: "ISO 9001:2015 is: ",
+    question: "Who are the targets of modern-day hackers?",
     answers: [
-      "an international security standard that lays out best practices for how organizations should manage their data",
-      "a set of practices and requirements that can help organizations of all sizes improve their quality management and create a quality management system (QMS)",
-      "none of above",
-      "all of above",
+      "Banks and finance companies that process a lot of payments",
+      "Any organization or individual is liable to be the victim of hackers",
+      "Companies that hold a lot of proprietary information",
+      "Companies that hold the credit card numbers of customers",
     ],
     correct: 2,
   },
   {
-    question: "ISO 27001:2013 is: ",
+    question: "It is OK to use the same password for all your online accounts as long as you keep it secret",
     answers: [
-      "an international security standard that lays out best practices for how organizations should manage their data",
-      "a set of practices and requirements that can help organizations of all sizes improve their quality management and create a quality management system (QMS)",
-      "none of above",
-      "all of above",
+      "False",
+      "True",
     ],
     correct: 1,
   },
   {
-    question: "What product does the company use to administer its IT infrastructure?",
-    answers: ["PCControl", "ManageEngine", "Jamf", "None of above"],
-    correct: 2,
+    question: "To which source should you refer when installing additional software on the workstation: ",
+    answers: ["Personal recommendations from your colleague", "Google Play app chart", "None of them, you can install the software without any limitations", "List of Standard Software and Blacklisted software"],
+    correct: 4,
+  },
+  {
+    question: "What would you do if the downloaded file disappeared?",
+    answers: ["Download it again", "Go to another site", "Scan computer for viruses", "Make coffee and relax"],
+    correct: 3,
+  },
+  {
+    question: "Your email account has been compromised. What is the best way of preventing further unauthorized access to your email?",
+    answers: ["Change the password and enable multi-factor authentication", "Change the password, then run an anti-virus scan", "Change the login password to your computer", "Update email application software to the latest version"],
+    correct: 1,
+  },
+  {
+    question: "What is the BEST way to validate a legitimate email vs. a phishing email?",
+    answers: ["Bad spelling, poor syntax, and grammar are some of the tell-tale signs of a fake email", "Look at the email headers to see where it really came from", "Look for poorly replicated logos", "Contact the sender on some other medium besides email to verify whether they sent you the email"],
+    correct: 4,
+  },
+  {
+    question: "On which categories are data owned by TechMagic classified?",
+    answers: ["Confidential, Public, Internal", "Public, Internal, Top secret", "Confidential, Public, Commercial secret", "Internal, Confidential, Top secret"],
+    correct: 1,
   },
 ];
 
@@ -135,13 +153,13 @@ function checkAnswerThree() {
     // Чистимо сторінку від останього запитання
     clearPageThree();
     // Показуємо результати
-    showResults();
+    showResultsThree();
 
   }
 
 };
 
-function showResults() {
+function showResultsThree() {
   console.log('This section result is ', scoreThree);
 
   const resultsTemplate = `

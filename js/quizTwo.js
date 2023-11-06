@@ -18,16 +18,36 @@ const questionsTwo = [
     question: "When you use personal devices you need: ",
     answers: [
       "Let it be as it is.",
-      "Enforce security configurations on your personal and mobile devices (password protection, anti-malware system, regular OS update).",
       "Install antivirus software.",
       "Install updates for programs that are constantly used.",
+      "Enforce security configurations on your personal and mobile devices (password protection, anti-malware system, regular OS update).",
     ],
-    correct: 2,
+    correct: 4,
   },
   {
     question: "All users are responsible for updating software installed on their workstations according to the latest corrections and additions",
     answers: ["False", "True"],
     correct: 2,
+  },
+  {
+    question: "What software is prohibited in the company?",
+    answers: [
+      "Torrents and software from the aggressor country are prohibited.",
+      "I can use any software.",
+      "Computer games are prohibited.",
+      "Unlicensed software may be used.",
+    ],
+    correct: 1,
+  },
+  {
+    question: "You can safely download files from:",
+    answers: [
+      "Torrent site",
+      "The link received from a friend",
+      "Official website",
+      "Browser pop-up",
+    ],
+    correct: 3,
   },
 ];
 
@@ -132,17 +152,17 @@ function checkAnswerTwo() {
   } else {
     // Останнє питання у масиві
     console.log('Last question');
-    // Чистимо сторінку від останього запитання
+    // Чистимо сторінку від останього запитанняscoreTwo
     clearPageTwo();
     // Показуємо результати
-    showResults();
+    showResultsTwo();
 
   }
 
 };
 
-function showResults() {
-  console.log('This section result is ', scoreTwo);
+function showResultsTwo() {
+  console.log('This section result is ',);
 
   const resultsTemplate = `
       <h2 class="title">%title%</h2>

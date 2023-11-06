@@ -1,33 +1,64 @@
 const questionsFour = [
   {
     question: "1password is",
-    answers: ["1 password", "companies control app", "digital password safety place", "i'm not sure what is it"],
+    answers: ["a password manager developed by AgileBits Inc", "companies access control application", "digital password safety place", "i'm not sure what is it"],
+    correct: 1,
+  },
+  {
+    question: "What platforms does 1password support?",
+    answers: [
+      "Linux only.",
+      "iOS and Android only.",
+      "Windows, MacOS, Linux, iOS, Android.",
+      "Windows only.",
+    ],
     correct: 3,
   },
   {
-    question: "ISO 9001:2015 is: ",
+    question: "1password supports two-factor authentication:",
     answers: [
-      "an international security standard that lays out best practices for how organizations should manage their data",
-      "a set of practices and requirements that can help organizations of all sizes improve their quality management and create a quality management system (QMS)",
-      "none of above",
-      "all of above",
-    ],
-    correct: 2,
-  },
-  {
-    question: "ISO 27001:2013 is: ",
-    answers: [
-      "an international security standard that lays out best practices for how organizations should manage their data",
-      "a set of practices and requirements that can help organizations of all sizes improve their quality management and create a quality management system (QMS)",
-      "none of above",
-      "all of above",
+      "true",
+      "false",
     ],
     correct: 1,
   },
   {
-    question: "What product does the company use to administer its IT infrastructure?",
-    answers: ["PCControl", "ManageEngine", "Jamf", "None of above"],
+    question: "1password has a browser extension:",
+    answers: [
+      "false",
+      "true",
+    ],
     correct: 2,
+  },
+  {
+    question: "What information can be stored in 1password?",
+    answers: [
+      "Logins and passwords",
+      "Credit card information",
+      "Bank account information.",
+      "All of above.",
+    ],
+    correct: 4,
+  },
+  {
+    question: "Information security is the responsibility of:",
+    answers: [
+      "IT Team",
+      "Security Guard",
+      "Everyone in the company",
+      "Management Team",
+    ],
+    correct: 3,
+  },
+  {
+    question: "Why is it important to have a good understanding of information security policies and procedures? ",
+    answers: [
+      "Helps to protect individuals from being victims of cybercriminals",
+      "Helps to protect the TechMagic information and business reputation",
+      "Helps to understand levels of responsibility",
+      "All of the above",
+    ],
+    correct: 4,
   },
 ];
 
@@ -135,13 +166,13 @@ function checkAnswerFour() {
     // Чистимо сторінку від останього запитання
     clearPageFour();
     // Показуємо результати
-    showResults();
+    showResultsFour();
 
   }
 
 };
 
-function showResults() {
+function showResultsFour() {
   console.log('This section result is ', scoreFour);
 
   const resultsTemplate = `
