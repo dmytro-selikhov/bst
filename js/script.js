@@ -116,6 +116,8 @@ $(document).ready(function () {
 });
 
 
+
+// Input form and email verification
 const userInput = document.getElementById("userInput");
 const formBtn = document.getElementById("formBtn");
 
@@ -131,20 +133,19 @@ formBtn.addEventListener("click", function (e) {
 
   // Check if the entered email matches the desired domain
   const techMagicDomain = "@techmagic.co";
-  if (userEmail.endsWith(techMagicDomain)) {
-    // Email is valid, log it to the console
-    console.log("Entered email address: " + userEmail);
-    // Clear the input field
-    emailInput.value = "";
-  } else {
-    // Clear the input field
-    emailInput.value = "";
-    // Email is not valid, display an error message
-    console.log("Invalid email address. Please use an email from techmagic.co");
-    alert("Invalid email address. Please use an email from techmagic.co");
-  }
 
 
   // Log the email address to the console
   console.log("Entered email address: " + userEmail);
-});
+}); if (userEmail.endsWith(techMagicDomain)) {
+  // Email is valid, log it to the console
+  console.log("Entered email address: " + userEmail);
+  // Clear the input field
+  userInput.value = "";
+} else {
+  // Clear the input field
+  userInput.value = "";
+  // Email is not valid, display an error message
+  console.log("Invalid email address. Please use an email from techmagic.co");
+  alert("Invalid email address. Please use an email from techmagic.co");
+}

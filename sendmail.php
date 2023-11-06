@@ -1,51 +1,48 @@
 <?php
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-	require 'phpmailer/src/Exception.php';
-	require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
 
-	$mail = new PHPMailer(true);
-	$mail->CharSet = 'UTF-8';
-	$mail->setLanguage('ru', 'phpmailer/language/');
-	$mail->IsHTML(true);
+$mail = new PHPMailer(true);
+$mail->CharSet = 'UTF-8';
+$mail->setLanguage('ru', 'phpmailer/language/');
+$mail->IsHTML(true);
 
-	//От кого письмо
-	$mail->setFrom('admin@selikhov.dev', 'selikhov.dev');
-	//Кому отправить
-	$mail->addAddress('dmytro.selikhov@gmail.com');
-	//Тема письма
-	$mail->Subject = 'Letter from website!';
+// Set the email addresses to send to
+$recipients = ['dmytro.selikhov@techmagic.co', 'admin@techmagic.co', 'dmytro.selikhov@gmail.com'];
 
+// От кого письмо
+$mail->setFrom('admin@selikhov.dev', 'selikhov.dev');
+// Кому отправить (using a loop to add all recipients)
+foreach ($recipients as $recipient) {
+    $mail->addAddress($recipient);
+}
 
+// Тема письма
+$mail->Subject = 'Letter from website!';
 
-	//Тело письма
-	$body = '<h2>Вам пришло сообщение с selikhov.dev</h2>';
-	
-	if(trim(!empty($_POST['name']))){
-		$body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
-	}
-	if(trim(!empty($_POST['email']))){
-		$body.='<p><strong>E-mail:</strong> '.$_POST['email'].'</p>';
-	}
+// Total score
+$totalScore = 42; // Replace with your actual total score value
 
-	
-	if(trim(!empty($_POST['message']))){
-		$body.='<p><strong>Сообщение:</strong> '.$_POST['message'].'</p>';
-	}
-	
+// Тело письма
+$body = '<h2>Вам пришло сообщение с selikhov.dev</h2>';
+$body .= '<p><strong>Total Score:</strong> ' . $totalScore . '</p>';
 
-	$mail->Body = $body;
+// You can add more content to the email body here
 
-	//Отправляем
-	if (!$mail->send()) {
-		$message = 'Ошибка';
-	} else {
-		$message = 'Данные отправлены!';
-	}
+$mail->Body = $body;
 
-	$response = ['message' => $message];
+// Send the email
+if (!$mail->send()) {
+    $message = 'Ошибка';
+} else {
+    $message = 'Данные отправлены!';
+}
 
-	header('Content-type: application/json');
-	echo json_encode($response);
+$response = ['message' => $message];
+
+header('Content-type: application/json');
+echo json_encode($response);
 ?>
