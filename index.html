@@ -41,8 +41,8 @@
 
           <form>
             <!-- <label for="userInput">Enter something:</label> -->
-            <input class="form_input" type="email" id="userInput" name="userInput" placeholder="useremail@techmagic.co"
-              required>
+            <input class="form_input" type="email" id="userInputEmail" name="userInputEmail"
+              placeholder="useremail@techmagic.co" required>
             <button class="form_btn" id="formBtn" type="submit">Confirm</button>
 
             <div class="form__text">
@@ -393,7 +393,7 @@
         </div>
 
       </div>
-
+      <!-- 
       <form id="formResult">
         <div class="section10_form">
           <div class="form__text">
@@ -405,7 +405,16 @@
             <button class="form_btn" id="sendResultBtn" type="submit">Send My Rusult</button>
           </div>
         </div>
+      </form> -->
+
+      <form method="post" id="sendUserResult" action="sendResult.php">
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="userEmailResult" required><br><br>
+        <label for="score">Score:</label>
+        <input type="text" name="score" id="userFinalScore" required><br><br>
+        <input type="submit" value="Send Data">
       </form>
+
 
     </div>
   </section>
@@ -425,13 +434,8 @@
   <!-- Подключаем слайдер Slick -->
   <script src="js/slick.min.js"></script>
   <!-- Подключаем файлы скриптов -->
-  <script src="js/quiz.js"></script>
-  <script src="js/quizTwo.js"></script>
-  <script src="js/quizThree.js"></script>
-  <script src="js/quizFour.js"></script>
-  <script src="js/sendResult.js"></script>
-  <script src="js/script.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/fullScript.js"></script>
+  >
 </body>
 
 </html>
