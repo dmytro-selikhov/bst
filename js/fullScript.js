@@ -125,7 +125,7 @@ const formBtn = document.getElementById("formBtn");
 // Initialize a variable to store the email address
 let userEmail = "";
 
-let userTotalScore = 0;
+let totalScore = 0;
 console.log(userInput);
 
 
@@ -276,6 +276,9 @@ function checkAnswer() {
   }
   console.log('score = ', score);
 
+  // Here, you should add the following line to accumulate the score in totalScore
+  totalScore += score;
+
   // Перевіряємо, чи останній елемент у масиві
   if (questionIndex !== questions.length - 1) {
     //  Не останнє питання у масиві
@@ -335,10 +338,6 @@ function showResults() {
 
   headerContainer.innerHTML = finalMessage;
 
-  // Добавляем результат в общую переменную
-  userTotalScore += score;
-  console.log('Total score after first quiz is ', userTotalScore);
-
   // Грати знову - поміняти на перейти до наступної секції
   submitBtn.blur();
   submitBtn.innerText = 'Go to the next section';
@@ -354,7 +353,6 @@ function showResults() {
     }
   };
 
-  return userTotalScore;
 };
 
 
@@ -502,6 +500,9 @@ function checkAnswerTwo() {
   }
   console.log('score = ', scoreTwo);
 
+  // Here, you should add the following line to accumulate the score in totalScore
+  totalScore += score;
+
   // Перевіряємо, чи останній елемент у масиві
   if (questionIndexTwo !== questionsTwo.length - 1) {
     //  Не останнє питання у масиві
@@ -561,10 +562,6 @@ function showResultsTwo() {
 
   headerContainerTwo.innerHTML = finalMessage;
 
-  // Добавляем результат в общую переменную
-  userTotalScore += score;
-  console.log('Total score after second quiz is ', userTotalScore);
-
   // Грати знову - поміняти на перейти до наступної секції
   submitBtnTwo.blur();
   submitBtnTwo.innerText = 'Go to the next section';
@@ -580,8 +577,6 @@ function showResultsTwo() {
     }
   };
 
-
-  return userTotalScore;
 };
 
 
@@ -723,6 +718,9 @@ function checkAnswerThree() {
   }
   console.log('score = ', scoreThree);
 
+  // Here, you should add the following line to accumulate the score in totalScore
+  totalScore += score;
+
   // Перевіряємо, чи останній елемент у масиві
   if (questionIndexThree !== questionsThree.length - 1) {
     //  Не останнє питання у масиві
@@ -782,10 +780,6 @@ function showResultsThree() {
 
   headerContainerThree.innerHTML = finalMessage;
 
-  // Добавляем результат в общую переменную
-  userTotalScore += score;
-  console.log('Total score after third quiz is ', userTotalScore);
-
   // Грати знову - поміняти на перейти до наступної секції
   submitBtnThree.blur();
   submitBtnThree.innerText = 'Go to the next section';
@@ -801,8 +795,6 @@ function showResultsThree() {
     }
   };
 
-
-  return userTotalScore;
 };
 
 
@@ -957,6 +949,9 @@ function checkAnswerFour() {
   }
   console.log('score = ', scoreFour);
 
+  // Here, you should add the following line to accumulate the score in totalScore
+  totalScore += score;
+
   // Перевіряємо, чи останній елемент у масиві
   if (questionIndexFour !== questionsFour.length - 1) {
     //  Не останнє питання у масиві
@@ -977,7 +972,6 @@ function checkAnswerFour() {
     clearPageFour();
     // Показуємо результати
     showResultsFour();
-
   }
 
 };
@@ -1015,9 +1009,6 @@ function showResultsFour() {
 
 
   headerContainerFour.innerHTML = finalMessage;
-  // Добавляем результат в общую переменную
-  userTotalScore += score;
-  console.log('Total score after fourth quiz is ', userTotalScore);
 
   // Грати знову - поміняти на перейти до наступної секції
   submitBtnFour.blur();
@@ -1032,10 +1023,10 @@ function showResultsFour() {
     const userFinalScore = document.getElementById("userFinalScore");
 
     userEmailResult.value = userEmail;
-    userFinalScore.value = userTotalScore;
+    userFinalScore.value = totalScore;
 
-    console.log(`user email is ${userInput} and user score is ${userTotalScore}`);
+    console.log(`user email is ${userInput} and user score is ${totalScore}`);
+    totalScore = 0;
   };
 
-  return userTotalScore;
 };
