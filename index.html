@@ -383,17 +383,18 @@
   <section id="section10">
     <!-- Section 10 content goes here -->
     <div class="wrapper">
+      <div class="section10_centr">
 
-      <div class="section10__info">
+        <div class="section10__info">
 
 
 
-        <div class="section1_info_right">
-          <img class="robot" src="img/elements/robot.png" alt="Robot">
+          <div class="section10__info_right">
+            <img class="section10__info_right" src="img/elements/robot.png" alt="Robot">
+          </div>
+
         </div>
-
-      </div>
-      <!-- 
+        <!-- 
       <form id="formResult">
         <div class="section10_form">
           <div class="form__text">
@@ -407,14 +408,16 @@
         </div>
       </form> -->
 
-      <form method="post" id="sendUserResult" action="sendResult.php">
-        <label for="email">Email:</label>
-        <input type="text" name="email" id="userEmailResult" required><br><br>
-        <label for="score">Score:</label>
-        <input type="text" name="score" id="userFinalScore" required><br><br>
-        <input type="submit" value="Send Data">
-      </form>
+        <form class="user__answer" method="post" id="sendUserResult" action="sendResult.php">
+          <label class="answer__label" for="email">Your Email:</label>
+          <input class="answer__field" type="text" name="email" id="userEmailResult" required readonly><br><br>
+          <label class="answer__label" for="score">Your Score:</label>
+          <input class="answer__field answer__bottom" type="text" name="score" id="userFinalScore" required
+            readonly><br><br>
+          <input type="submit" class="form_btn" value="Send Data">
+        </form>
 
+      </div>
 
     </div>
   </section>

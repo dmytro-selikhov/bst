@@ -1016,24 +1016,31 @@ function showResultsFour() {
 
   // Грати знову - поміняти на перейти до наступної секції
   submitBtnFour.blur();
-  submitBtnFour.innerText = 'Go to the next section';
+  submitBtnFour.innerText = 'Check your results';
 
   // Перезавантаження стоірнки, треба поміняти на перехід до іншої секції та зберегти результат у змінну.
   // submitBtnFour.onclick = () => history.go();
 
-  
 
-    // Scroll to the "section9" element
-    const userEmailResult = document.getElementById("userEmailResult");
-    const userFinalScore = document.getElementById("userFinalScore");
 
-    userEmailResult.value = userEmail;
-    //userFinalScore.value = totalScore;
-    userFinalScore.value = totalScore;
-    
+  // Scroll to the "section9" element
+  const userEmailResult = document.getElementById("userEmailResult");
+  const userFinalScore = document.getElementById("userFinalScore");
 
-    console.log(`user email is ${userEmail} and user score is ${totalScore}`);
-    totalScore = 0;
- 
+  userEmailResult.value = userEmail;
+  //userFinalScore.value = totalScore;
+  userFinalScore.value = totalScore;
+
+
+  console.log(`user email is ${userEmail} and user score is ${totalScore}`);
+  totalScore = 0;
+
+  submitBtnFour.onclick = function () {
+    // Scroll to the "section6" element
+    const section10 = document.getElementById("section10");
+    if (section10) {
+      section10.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
 };
