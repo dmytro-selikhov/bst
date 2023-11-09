@@ -146,13 +146,23 @@ formBtn.addEventListener("click", function (e) {
     console.log("Entered email address: " + userEmail);
     // Clear the input field
     userInput.value = "";
+
+    const section2 = document.getElementById("section2");
+    if (section2) {
+      section2.scrollIntoView({ behavior: "smooth" });
+    }
   } else {
     // Clear the input field
-    userInput.value = "";
+    // userInput.value = "";
     // Email is not valid, display an error message
     console.log("Invalid email address. Please use an email from techmagic.co");
     alert("Invalid email address. Please use an email from techmagic.co");
   }
+
+
+  ////////////////////////////////
+
+
 });
 
 

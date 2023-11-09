@@ -171,6 +171,11 @@ body {
   margin-bottom: 20px;
 }
 
+#section10 {
+  padding: 100px 50px;
+  height: 100vh;
+}
+
 .user__answer {
   max-width: 400px;
   width: 100%;
